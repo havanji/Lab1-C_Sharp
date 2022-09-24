@@ -33,9 +33,18 @@ namespace ConsoleApp1
 
             //Task 1.2
 
-            int number;
-            number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(number);
+            double num, r;
+            int sum, m;
+            sum = 0;
+            num = Convert.ToDouble(Console.ReadLine());
+            for (int i = 0; i < 2; i++)
+            {
+                r = num * 10;
+                m = (int)(r % 10);
+                sum = sum + m;
+                num = num * 10;
+            }
+            Console.WriteLine("Сума двох перших знаків після коми : " + sum);
 
             //Task 1.3
 
@@ -59,12 +68,14 @@ namespace ConsoleApp1
 
             float n1, n2, n3;
             n1 = Convert.ToInt32(Console.ReadLine());
-            n2 = Convert.ToInt32(Console.ReadLine());
-            n3 = Convert.ToInt32(Console.ReadLine());
-            string v_mezhax = (n1 >= -5) && (n1 <= 5) ? "Перше число в межах (-5:5)" : (n2 >= -5) && (n2 <= 5) ?
-                "Друге число в межах (-5:5)" : (n2 >= -5) && (n2 <= 5) ? "Третє число в межах (-5:5)" :
-                "Не одне з чисел не в межах (-5:5)";
-            Console.WriteLine(v_mezhax);
+            n2 = Convert.ToInt32((Console.ReadLine()));
+            n3 = Convert.ToInt32((Console.ReadLine()));
+            string check1 = (n1 >= -5) && (n1 <= 5) ? "Перше число належить дiапазону" : "Перше число не належить дiапазону";
+            string check2 = (n2 >= -5) && (n2 <= 5) ? "Друге число належить дiапазону" : "Друге число не належить дiапазону";
+            string check3 = (n3 >= -5) && (n3 <= 5) ? "Третє число належить дiапазону" : "Третє число не належить дiапазону";
+            Console.WriteLine(check1);
+            Console.WriteLine(check2);
+            Console.WriteLine(check3);
 
             //Task 2.2
 
