@@ -33,18 +33,11 @@ namespace ConsoleApp1
 
             //Task 1.2
 
-            double num, r;
-            int sum, m;
-            sum = 0;
-            num = Convert.ToDouble(Console.ReadLine());
-            for (int i = 0; i < 2; i++)
-            {
-                r = num * 10;
-                m = (int)(r % 10);
-                sum = sum + m;
-                num = num * 10;
-            }
-            Console.WriteLine("Сума двох перших знаків після коми : " + sum);
+            double a = double.Parse(Console.ReadLine());
+            var x1 = (a * 10) % 10;
+            var x2 = (a * 100) % 10;
+            int res = (int)(x1 + x2);
+            Console.WriteLine(res);
 
             //Task 1.3
 
